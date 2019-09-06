@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Love Calculator</string>
+    <string name="enter_names_to_perform_love_calculation">Enter names to perform love calculation</string>
+    <string name="person_one">Person one</string>
+    <string name="person_two">Person two</string>
+    <string name="calculate">Calculate</string>
+
+    <string name="err_name_empty">Please enter name</string>
+</resources>
