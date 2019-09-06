@@ -14,12 +14,15 @@ import org.koin.core.parameter.parametersOf
 
 class MainActivity : AppCompatActivity(),
     MainContract.View {
+
+    //Inject presenter
     private val mPresenter: MainPresenter by inject { parametersOf(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Clear the error when there's user input
         et_personOne.addTextChangedListener(object: TextWatcher{
             override fun afterTextChanged(s: Editable?) {
                 et_personOne.error = null
@@ -59,6 +62,7 @@ class MainActivity : AppCompatActivity(),
         }
 
         btn_calculate.setOnClickListener {
+            //You can use presenter here
             mPresenter.performLoveCalculation(
                 et_personOne.text.toString(),
                 et_personTwo.text.toString()
